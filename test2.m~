@@ -1,0 +1,14 @@
+clc; clear all; close all;
+  %{
+  subaxis(2,1,1,'SpacingVert',0,'MR',0); 
+  imagesc(magic(3)) 
+  subaxis(2,'p',.02); 
+  imagesc(magic(4)) 
+  %}
+
+
+
+srcFiles = dir('images/*.jpg');
+set(gcf,'Color',[1,1,1]);
+I = combinef(srcFiles);
+imshow(I);
